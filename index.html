@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,400italic,500,300italic,500italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href="stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	
+	
+	<script src="javascripts/angular.min.js"></script>
+	<script src="javascripts/ui-bootstrap-0.12.1.min.js"></script>
+	<script src="javascripts/jquery-2.1.3.min.js"></script>
+	<script src="javascripts/script.js"></script>
+
+
+	
+	<script src="javascripts/bootstrap.min.js"></script>
+	<title>Dafi | Do kuchni | Dzbanki filtrujące</title>
+	
+</head>
+
+<body ng-app="myApp">
+
+<div pro>
+  
+
+  <div ng-repeat="(key, value) in products">
+ 
+  </div>
+</div>
+	<div class="container-fluid">
+		<header class="col-md-12 col-sm-12">
+
+			<div class="logo col-md-1">
+				<a href="."><img src="images/dafi-logo.png" alt="Dafi"></a>
+			</div>
+
+			<nav class="top-menu col-md-11">
+				<ul class="nav navbar-nav top-menu">
+					<li><a href="#">Rejestracja</a></li>
+					<li><a href="#">Logowanie</a></li>
+					<li><a href="#">Zmiana języka</a></li>
+					<li class="basket"><a href="#"><strong>Koszyk:</strong> <span>{{bucket.price}}</span>zł (<span>{{bucket.amount}}</span> prod.)</a></li>
+				</ul>
+			</nav>
+
+
+			<nav class="navigation navbar navbar-default col-md-11 second-menu">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				    </div>
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="col-md-12">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Produkty kuchenne<span class="caret"></span></a>	
+										<ul class="dropdown-menu" role="menu">
+											<li><a href=".">Item 1</a></li>
+											<li><a href=".">Item 2</a></li>
+											<li><a href=".">Item 3</a></li>
+										</ul>
+									</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Produkty do instalacji<span class="caret"></span></a>
+										<ul class="dropdown-menu" role="menu">
+											<li><a href=".">Item 1</a></li>
+											<li><a href=".">Item 2</a></li>
+											<li><a href=".">Item 3</a></li>
+										</ul>
+								</li>
+								<li><a href="">Eko-Dafi</a></li>
+								<li><a href="">O firmie</a></li>
+								<li><a href="">Sieć sprzedaży</a></li>
+								<li><a href="">Obsługa klienta</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--/container-fluid -->
+			</nav>	
+		</header>
+		<div class="main col-md-12 col-sm-12 col-xs-12">
+			<ol class="breadcrumb">
+				<li><a href="#">Start</a></li>
+				<li><a href="#">Do kuchni</a></li>
+				<li><a href="#">Dzbanki filtrujące</a></li>
+			</ol>
+			<!-- /breadcrumb -->
+
+			<div class="banner">
+				<div class="decoration-1 col-md-6">
+					<h1><span class="light">Dzbanki</span><br/>flitrujące</h1>
+					<em>Dzbanki filtrujące to wygodny sposób na filtrowanie domowej wody. Uzyskasz zdrową, bez kamienia i czystą wodę, dzięki której Twoje napoje i domowe posiłki będą smaczniejsze.</em>
+				</div>
+				<div class="decoration-2 col-md-6" role="decoration">
+				</div>
+			</div>
+			<!--/banner-->
+
+			<div class="filter">
+				<strong>Opcje filtrowania</strong> <button class="btn" ng-click="clear()" ng-show="showButton()">Wyczyść</button>
+			</div>
+			<!-- /filter -->
+			<div  ng-repeat="alert in alerts" class="alert alert-success" role="alert">
+  					Dodano do koszyka: {{alert.name}}
+			</div>
+			<form method="" action="">
+
+
+			
+
+				<div class="tabs">
+
+					<div class="tab">
+						<strong>Wkład</strong>
+						<div class="squaredOne">
+							<input type="radio" value="unimax" id="r1" name="contribution" ng-model="model.contribution" ng-checked="model.checked"/>
+						    <label for="r1"><div class="checkout"><span></span></div><div class="image unimax"></div><div class="text unimax">Unimax</div></label>
+						</div>
+						<div class="squaredOne">
+							<input type="radio" value="classic" id="r2" name="contribution" ng-model="model.contribution" ng-checked="model.checked"/>
+						    <label for="r2"><div class="checkout"><span></span></div><div class="image clasic"></div><div class="text clasic">Clasic</div></label>
+						</div>
+					</div>
+
+					<div class="tab">
+						<strong>Pojemność</strong>
+						<div class="squaredOne">
+							<input type="radio" value="small" id="r3" name="capacity" ng-model="model.size"/>
+						    <label for="r3"><div class="checkout"><span></span></div><div class="image small"></div><div class="text">Mały</div></label>
+						</div>
+						<div class="squaredOne">
+							<input type="radio" value="medium" id="r4" name="capacity" ng-model="model.size"/>
+						    <label for="r4"><div class="checkout"><span></span></div><div class="image medium"></div><div class="text">Średni</div></label>
+						</div>
+						<div class="squaredOne">
+							<input type="radio" value="large" id="r5" name="capacity" ng-model="model.size"/>
+						    <label for="r5"><div class="checkout"><span></span></div><div class="image large"></div><div class="text">Duży</div></label>
+						</div>
+					</div>
+
+				</div>
+
+				
+
+				<div class="tabs">
+
+
+					<div class="tab">
+						<strong>Wskaźnik</strong> 
+						<div class="squaredOne">
+							<input type="radio" value="manual" id="r6" name="indicator" ng-model="model.indicator"/>
+						    <label for="r6"><div class="checkout"><span></span></div><div class="image manual"></div><div class="text">Manualny</div></label>
+							</div>
+						<div class="squaredOne">
+								<input type="radio" value="digital" id="r7" name="indicator" ng-model="model.indicator"/>
+							    <label for="r7"><div class="checkout"><span></span></div><div class="image electronic"></div><div class="text">Elektroniczny</div></label>
+						</div>
+						<div class="squaredOne">
+								<input type="radio" value="led" id="r8" name="indicator" ng-model="model.indicator" />
+							    <label for="r8"><div class="checkout"><span></span></div><div class="image led"></div><div class="text">Led</div></label>
+						</div>
+							
+					</div>
+				
+
+					<div class="tab">
+
+						<strong class="color">kolor</strong> 
+						<div class="squaredOne">
+							<input type="checkbox" ng-model="model.color.orange" value="orange" id="r9" name="color" /> 
+						    <label for="r9"><div class="checkout orange"><span></span></div></label>
+						</div>
+						
+						<div class="squaredOne">
+							<input type="checkbox" ng-model="model.color.turkus" ng-checked="model.color.turkus" id="r10" name="color" />
+						    <label for="r10"><div class="checkout blue"><span></span></div></label>
+						</div>
+						<div class="squaredOne">
+							<input type="checkbox" ng-model="model.color.green" ng-checked="model.color.green"   id="r11" name="color" />
+						    <label for="r11"><div class="checkout green"><span></span></div></label>
+						</div>
+						<div class="squaredOne">
+							<input type="checkbox" ng-model="model.color.red" ng-checked="model.color.red"  id="r12" name="color" />
+						    <label for="r12"><div class="checkout red"><span></span></div></label>
+						</div>	
+						<div class="squaredOne">
+							<input type="checkbox" ng-model="model.color.black" ng-checked="model.color.black" id="r13" name="color" />
+						    <label for="r13"><div class="checkout black"><span></span></div></label>
+						</div>	
+						<div class="squaredOne">
+							<input type="checkbox" ng-model="model.color.yellow" ng-checked="model.color.yellow"  id="r14" name="color" />
+						    <label for="r14"><div class="checkout yellow"><span></span></div></label>
+						</div>				
+						
+					</div>
+				
+				</div>
+
+			</form>
+
+			<section class="products">
+				<article ng-repeat="value in products | selectedColor:model.color | filter:{indicator:model.indicator , size:model.size}" ng-click="addProduct(value); addAlert(value.name)">
+					<figure>
+						<img src="images/orange.png" alt="">
+
+
+						<figcaption>{{value.name}} &ndash;
+
+							<span ng-if="value.color == 'orange'">pomarańczowy</span>
+							<span ng-if="value.color == 'turkus'">turkusowy</span>
+							<span ng-if="value.color == 'green'">zielony</span>
+							<span ng-if="value.color == 'red'">czerwony</span>
+							<span ng-if="value.color == 'black'">czarny</span>
+							<span ng-if="value.color == 'yellow'">żółty</span>
+
+						</figcaption>
+					</figure>
+					
+					
+					<div class="price-now" ng-if="value.old != 0"><strike>{{value.old}}</strike> teraz tylko <strong>{{value.price}}</strong></div>
+					<div class="price" ng-if="value.old == 0">{{value.price}}</div>
+
+				</article>
+
+			</section>
+
+
+
+		</div>
+		<!-- /main -->
+
+	</div>
+
+
+
+</body>

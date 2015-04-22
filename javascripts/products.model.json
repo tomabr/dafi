@@ -1,0 +1,14 @@
+{
+	"0": {"name": "Dzbanek Atri Classic 1,4l z wskaźnikiem cyfrowym", "size" : "small", "indicator": "digital", "color": "orange", "price":"54.90", "old":"65.90"},
+	"1" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem cyfrowym","size" : "large", "indicator": "digital", "color": "orange", "price":"65.90", "old":"0"},
+	"2" : {"name": "Dzbanek Atri Classic 2,4l z wskaźnikiem manualnym","size" : "large", "indicator": "manual", "color": "orange", "price":"65.90", "old":"0"},
+	"3" : {"name": "Dzbanek Atri Classic 2,4l z wskaźnikiem cyfrowym", "size" : "large", "indicator": "digital", "color": "red", "price":"65.90", "old":"0"},
+	"4" : {"name": "Dzbanek Atri Classic 2,4l z wskaźnikiem manualnym", "size" : "large",  "indicator": "manual", "color": "orange", "price":"65.90", "old":"0"},
+	"5" : {"name": "Dzbanek Atri Classic 2,4l z wskaźnikiem manualnym", "size" : "large", "indicator": "manual", "color": "green", "price":"54.90", "old":"65.90"},
+	"6" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem cyfrowym", "size" : "large", "indicator": "digital", "color": "red", "price":"65.90", "old":"0"},
+	"7" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem manualnym", "size" : "large", "indicator": "manual", "color": "turkus", "price":"65.90", "old":"0"},
+	"8" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem manualnym", "size" : "large", "indicator": "manual",  "color": "green", "price":"65.90", "old":"0"},
+	"9" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem cyfrowym", "size" : "large", "indicator": "digital", "color": "red", "price":"65.90", "old":"0"},
+	"10" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem manulanym", "size" : "large", "indicator": "manual",  "color": "turkus", "price":"65.90", "old":"0"},
+	"11" : {"name": "Dzbanek Atri Classic 3,0l z wskaźnikiem manualnym", "size" : "large", "indicator": "manual", "color": "green", "price":"65.90", "old":"0"}
+}
